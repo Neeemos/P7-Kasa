@@ -1,0 +1,22 @@
+@import '../../sass/variable.scss';
+.error {
+  color: $couleur-secondaire;
+  &__card {
+    padding-bottom: 20%;
+    &__title {
+      display: flex;
+      justify-content: center;
+      font-size: 250px;
+    }
+    &__text {
+      font-size: 35px;
+      text-align: center;
+    }
+    &__link {
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      text-decoration: underline solid $couleur-secondaire;
+    }
+  }
+}
