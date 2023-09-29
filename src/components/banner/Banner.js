@@ -2,6 +2,7 @@ import './Banner.scss';
 import { useLocation } from "react-router-dom";
 //import BannerImg from '../../assets/banner.jpg';
 
+
 export default function Header() {
   const location = useLocation();
   return (
