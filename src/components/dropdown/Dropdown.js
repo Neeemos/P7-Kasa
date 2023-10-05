@@ -18,7 +18,7 @@ function Dropdown({ title, content }) {
           alt={`Informations sur ${title}`}
         />
       </h3>
-      {isOpen && <div className="dropDown__content">{content}</div>}
+      {isOpen && <div className="dropDown__content"><p>{content}</p></div>}
     </div>
   );
 }

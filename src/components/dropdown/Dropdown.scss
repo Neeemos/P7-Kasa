@@ -6,6 +6,9 @@
   margin: 0 auto;
   border-radius: 10px;
   margin-bottom: 20px;
+  @media screen and (max-width: 500px) {
+    width: 95%;
+  }
   &__title {
     display: flex;
     justify-content: space-between;
