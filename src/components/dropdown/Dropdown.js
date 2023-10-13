@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ArrowDown from '../../assets/arrowDown.svg';
 import './Dropdown.scss';
-function Dropdown({ title, content }) {
+function Dropdown({ title, content, className }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -9,8 +9,8 @@ function Dropdown({ title, content }) {
   };
 
   return (
-    <div className="dropDown">
-      <h3 className="dropDown__title" onClick={toggleCollapse}>
+    <div className={className}>
+      <h3 className={`${className}__title`} onClick={toggleCollapse}>
         {title}
         <img
           className={isOpen ? "dropDown__title__arrow__down" : "dropDown__title__arrow__up"}

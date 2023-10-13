@@ -1,16 +1,19 @@
 import './Banner.scss';
-import { useLocation } from "react-router-dom";
+
 //import BannerImg from '../../assets/banner.jpg';
 
 
-export default function Header() {
-  const location = useLocation();
+export default function Header(props) {
+  const { bannerClass, bannerText } = props;
+
   return (
-    <section className={location.pathname !== '/about' ? 'banner' : 'banner__about'}>
-      {location.pathname !== '/about' ? <p className='banner__text'>Chez vous, partout et ailleurs</p> : '' }
+    <section className={bannerClass}>
+      {bannerText && (
+        <p className="banner__text">
+        {bannerText}
+      </p>
+      )}
     </section>
-
-  )
-
+  );
 }
 

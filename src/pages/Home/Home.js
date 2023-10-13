@@ -18,15 +18,15 @@ export default function Home() {
 				setLogementsData(data);
 			})
 			.catch((error) => {
-				console.error('Error fetching JSON:', error);
+				alert('Une erreur est survenue lors de la recupération des données');
 			});
 	}, []);
 	return (
 		<div className='Home'>
-			<Banner />
+			<Banner bannerClass="banner" bannerText="Chez vous, partout et ailleurs" />
 			<section className='cards'>
 				{logementsData.map((logement) => (
-					<Link to={`/${logement.id}`} className="cards__link" key={logement.id}>
+					<Link to={`/logement/${logement.id}`} className="cards__link" key={logement.id}>
 						<img className="cards__img" src={logement.cover} alt={logement.description} />
 						<h3 className="cards__title">{logement.title}</h3>
 					</Link>
