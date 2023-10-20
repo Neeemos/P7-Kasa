@@ -15,10 +15,10 @@ export default function Header() {
         <nav className='headerBar'>
           <ul className='headerBar__list'>
             <li className={location.pathname === '/' ? 'headerBar__list__active' : 'headerBar__list'}>
-              <Link to="/">Home</Link>
+              <Link to="/" className='headerBar__text'>Home</Link>
             </li>
             <li className={location.pathname === '/about' ? 'headerBar__list__active' : 'headerBar__list'}>
-              <Link to="/about">About</Link>
+              <Link to="/about" className='headerBar__text'>About</Link>
             </li>
           </ul>
         </nav>
