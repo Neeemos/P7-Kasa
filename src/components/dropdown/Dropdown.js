@@ -21,13 +21,17 @@ function Dropdown({ title, content, className }) {
       {isOpen && (
         <div className="dropDown__content">
           {Array.isArray(content) ? (
-            content.map((item, index) => (
-              <p key={index}>{item}</p>
-            ))
+            <ul>
+              {content.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           ) : (
             <p>{content}</p>
           )}
         </div>
+
+
       )}
     </div>
   );

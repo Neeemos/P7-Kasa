@@ -1,7 +1,7 @@
 import Arrow from '../../assets/arrowDown.svg';
 import { useState } from 'react';
-import './Carrousel.scss';
-import API_URLS from '../../services/api';
+import '../carrousel/Carrousel.scss';
+
 
 export default function Slide({ tabImage }) {
     const [image, setImage] = useState(0);
@@ -13,13 +13,11 @@ export default function Slide({ tabImage }) {
     const prevSlide = () => {
         setImage((image - 1 + tabImage.length) % tabImage.length);
     };
-    const backgroundImageStyle = {
-        backgroundImage: tabImage.length > 0 ? `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${tabImage[image]})` : `url(${API_URLS.errorImg})`,
-    };
+
    
     return (
         <section className='carrousel'>
-            <div className="carrousel__background" style={backgroundImageStyle} />
+            <img className="carrousel__background" src={tabImage[image]} alt="Photodu logement"/>
 
             {tabImage.length > 1 && (
                 <>

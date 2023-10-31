@@ -11,9 +11,10 @@
   margin: 50px auto; 
 
   &__background {
-    background-position: center;
-    background-size: cover;
+    object-fit: cover;
     width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    border-radius: 25px;
   }
   &__arrow {
     position: absolute;
@@ -22,16 +23,17 @@
 
     &__right {
       right: 25px;
-      transform: rotate(270deg);
+      transform: translateY(-50%) rotate(270deg);
+      
       &:active {
-        transform: rotate(270deg) scale(1.2);
+        transform:  translateY(-50%) rotate(270deg) scale(1.2);
       }
     }
     &__left {
-      transform: rotate(90deg);
+      transform: translateY(-50%) rotate(90deg);
       left: 25px;
       &:active {
-        transform: rotate(90deg) scale(1.2);
+        transform:  translateY(-50%) rotate(90deg) scale(1.2);
       }
     }
   }
