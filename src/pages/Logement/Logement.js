@@ -49,7 +49,7 @@ export default function Accomodation() {
       {logementsData.pictures ? (
         <>
           <Carrousel tabImage={logementsData.pictures} />
-          <div className="logement">
+          <section className="logement">
             <div className="logement__information">
               <div className="logement__information__appartement">
                 <h1 className="logement__information__appartement__title">{logementsData.title}</h1>
@@ -86,7 +86,7 @@ export default function Accomodation() {
                 <Dropdown className="information__dropdown" title="Equipements" content={logementsData.equipments} />
               </div>
             </div>
-          </div>
+          </section>
         </>
       ) : (
         'Loading...'
