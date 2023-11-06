@@ -23,11 +23,11 @@ function Dropdown({ title, content, className }) {
           {Array.isArray(content) ? (
             <ul>
               {content.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li className="dropDown__text" key={index}>{item}</li>
               ))}
             </ul>
           ) : (
-            <p>{content}</p>
+            <p className='dropDown__text'>{content}</p>
           )}
         </div>
 

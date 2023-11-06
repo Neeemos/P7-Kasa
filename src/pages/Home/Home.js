@@ -22,7 +22,7 @@ export default function Home() {
 			});
 	}, []);
 	return (
-		<div className='Home'>
+		<main className='Home'>
 			<Banner bannerClass="banner" bannerText="Chez vous, partout et ailleurs" />
 			<section className='cards'>
 				{logementsData.map((logement) => (
@@ -32,7 +32,7 @@ export default function Home() {
 					</Link>
 				))}
 			</section>
-		</div>
+		</main>
 
 	)
 }

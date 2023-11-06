@@ -15,27 +15,32 @@ export default function Slide({ tabImage }) {
     };
 
    
+    
+    
     return (
         <section className='carrousel'>
-            <img className="carrousel__background" src={tabImage[image]} alt="Photodu logement"/>
-
-            {tabImage.length > 1 && (
+            {tabImage && tabImage.length > 0 ? (
                 <>
-                    <img
-                        className='carrousel__arrow carrousel__arrow__right'
-                        src={Arrow}
-                        alt="voir le prochain slide"
-                        onClick={nextSlide}
-                    />
-                    <img
-                        className='carrousel__arrow carrousel__arrow__left'
-                        src={Arrow}
-                        alt="voir le slide précédent "
-                        onClick={prevSlide}
-                    />
-                    <p className='carrousel__number'>{image + 1} / {tabImage.length}</p>
+                    <img className="carrousel__background" src={tabImage[image]} alt="Photodu logement" />
+                    {tabImage.length > 1 && (
+                        <>
+                            <img
+                                className='carrousel__arrow carrousel__arrow__right'
+                                src={Arrow}
+                                alt="voir le prochain slide"
+                                onClick={nextSlide}
+                            />
+                            <img
+                                className='carrousel__arrow carrousel__arrow__left'
+                                src={Arrow}
+                                alt="voir le slide précédent "
+                                onClick={prevSlide}
+                            />
+                            <p className='carrousel__number'>{image + 1} / {tabImage.length}</p>
+                        </>
+                    )}
                 </>
-            ) }
+            ) : null}
         </section>
     );
 }

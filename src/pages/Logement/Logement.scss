@@ -1,20 +1,13 @@
 @import '../../sass/styles.scss';
 .logement {
-  &__information {
+  .information {
     color: #ff6060;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 3%;
 
-    &__information {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-weight: 500;
-      font-size: 14px;
-    }
-    &__appartement {
+    .appartement {
       display: flex;
       flex-direction: column;
       font-size: 14px;
@@ -34,7 +27,7 @@
         font-style: normal;
         font-weight: 500;
       }
-      &__tags {
+      .tags {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -47,23 +40,36 @@
         }
       }
     }
-    &__host {
+    .host {
       align-items: flex-end;
       display: flex;
       flex-direction: column;
+      gap: 10px;
       &__name {
         align-items: flex-end;
         display: flex;
         flex-direction: column;
       }
-    }
-    &__image {
-      border-radius: 50%;
-      width: 64px;
+      &__image {
+        border-radius: 50%;
+        width: 64px;
+      }
+      &__block {
+        align-items: flex-end;
+        display: flex;
+        gap: 0 10px;
+        justify-content: flex-end;
+      }
+
+      &__stars {
+        display: flex;
+        gap: 10px;
+      }
     }
   }
 }
-.information {
+
+.description {
   display: flex;
   flex-direction: row;
   gap: 5%;
@@ -76,14 +82,13 @@
       width: 100%;
     }
   }
-
-  &__dropdown {
+  .menu {
     background-color: #f6f6f6;
-    width: 100%;
-    margin: 0 auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    
     &__title {
       display: flex;
       justify-content: space-between;

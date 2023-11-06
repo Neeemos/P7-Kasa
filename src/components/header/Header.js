@@ -9,9 +9,9 @@ export default function Header() {
   return (
     <>
       <header className='header'>
-        <h1>
+        <figure>
           <img className="header__logo" src={Logo} alt="kasa, location d'appartements" />
-        </h1>
+        </figure>
         <nav className='headerBar'>
           <ul className='headerBar__list'>
             <li className={location.pathname === '/' ? 'headerBar__list__active' : 'headerBar__list'}>
