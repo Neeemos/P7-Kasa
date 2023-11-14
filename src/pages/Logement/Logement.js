@@ -4,7 +4,7 @@ import API_URLS from '../../services/api';
 import Carrousel from '../../components/carrousel/Carrousel.js';
 import Dropdown from '../../components/dropdown/Dropdown.js';
 import './Logement.scss';
-import Star from '../../components/star/star.js';
+import Star from '../../components/star/Star.js';
 
 
 
@@ -75,21 +75,19 @@ export default function Accomodation() {
                 <div className="host__stars">
                   {[...Array(5)].map((star, index) => {
                     const ratingIndex = index + 1;
-                    return (
-                      <Star key={index} isFull={ratingIndex <= rating} size="24px" />
+                    const starClassName = ratingIndex <= rating ? 'star__full' : 'star__empty';
 
+                    return (
+                      <Star key={index} className={starClassName} />
                     );
                   })}
                 </div>
               </div>
             </div>
             <div className="logement__description description">
-              <div className="description__menu menu">
-                <Dropdown className="menu" title="Description" content={logementsData.description} />
-              </div>
-              <div className="description__menu menu">
-                <Dropdown className="menu" title="Equipements" content={logementsData.equipments} />
-              </div>
+              <Dropdown className="description__menu" title="Description" content={logementsData.description} />
+              <Dropdown className="description__menu" title="Equipements" content={logementsData.equipments} />
+
             </div>
           </section>
         </>

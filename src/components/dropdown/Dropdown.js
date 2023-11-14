@@ -9,7 +9,7 @@ function Dropdown({ title, content, className }) {
   };
 
   return (
-    <div className={className}>
+    <div className={`${className} ${isOpen ? 'open' : ''}`}>
       <h3 className={`${className}__title`} onClick={toggleCollapse}>
         {title}
         <img
