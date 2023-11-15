@@ -6,4 +6,4 @@ const Star = ({ className }) => {
   return <FontAwesomeIcon icon={faStar}  className={className}  />;
 };
 
-export default Star;
+export default Star; 
