@@ -1,4 +1,4 @@
-![logo]([https://user.oc-static.com/upload/2022/06/22/16559011566667_FR_1117_P4_Banner-Ohmyfood.png](https://user.oc-static.com/upload/2022/06/24/16560899769906_FR_811_P8_Banner-Kasa%20%281%29.png))
+![Logo](https://user.oc-static.com/upload/2022/06/24/16560899769906_FR_811_P8_Banner-Kasa%20%281%29.png)
 # OC - P7 -  KASA  ![logo](http://www.w3.org/Icons/valid-html20.png) - ![logo](http://www.w3.org/Icons/valid-css.png)
 
 Le site de Kasa a été codé il y a maintenant plus de 10 ans en ASP.NET avec un code legacy important. 
