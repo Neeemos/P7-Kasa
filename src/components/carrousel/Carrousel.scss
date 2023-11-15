@@ -1,0 +1,48 @@
+@import '../../sass/styles.scss';
+
+.carrousel {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-height: 415px;
+  border-radius: 25px;
+  background-position: center;
+  background-size: cover;
+  margin: 50px auto; 
+
+  &__background {
+    object-fit: cover;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    border-radius: 25px;
+  }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    height: 15%;
+
+    &__right {
+      right: 25px;
+      transform: translateY(-50%) rotate(270deg);
+      
+      &:active {
+        transform:  translateY(-50%) rotate(270deg) scale(1.2);
+      }
+    }
+    &__left {
+      transform: translateY(-50%) rotate(90deg);
+      left: 25px;
+      &:active {
+        transform:  translateY(-50%) rotate(90deg) scale(1.2);
+      }
+    }
+  }
+  &__number {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    color: $couleur-primaire;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}

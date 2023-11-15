@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Layout from "./layout/layout";
+import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home/Home";
-import Carrousel from './pages/Carrousel/Logement';
+import Carrousel from './pages/Logement/Logement';
 import Error from "./pages/Error/Error";
 import About from "./pages/About/About";
 

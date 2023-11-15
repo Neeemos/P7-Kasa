@@ -9,7 +9,7 @@ function Dropdown({ title, content, className }) {
   };
 
   return (
-    <div className={className}>
+    <div className={`${className} ${isOpen ? 'open' : ''}`}>
       <h3 className={`${className}__title`} onClick={toggleCollapse}>
         {title}
         <img
@@ -18,7 +18,21 @@ function Dropdown({ title, content, className }) {
           alt={`Informations sur ${title}`}
         />
       </h3>
-      {isOpen && <div className="dropDown__content"><p>{content}</p></div>}
+      {isOpen && (
+        <div className="dropDown__content">
+          {Array.isArray(content) ? (
+            <ul>
+              {content.map((item, index) => (
+                <li className="dropDown__text" key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className='dropDown__text'>{content}</p>
+          )}
+        </div>
+
+
+      )}
     </div>
   );
 }
